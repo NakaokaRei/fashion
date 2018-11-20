@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ResNet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="写真を撮影してください" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRV-fP-8gl">
+                                <rect key="frame" x="92" y="406" width="191" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GeC-Zi-KNF">
+                                <rect key="frame" x="164" y="485" width="47" height="30"/>
+                                <state key="normal" title="カメラ"/>
+                                <connections>
+                                    <action selector="openCamera:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QAX-dl-506"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="おしゃれ診断" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFX-Jf-bLG">
+                                <rect key="frame" x="135" y="36" width="105" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1eh-G7-f1W">
+                                <rect key="frame" x="153" y="533" width="69" height="30"/>
+                                <state key="normal" title="アルバム"/>
+                                <connections>
+                                    <action selector="openLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sK2-0P-uOd"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aBO-vr-zCY">
+                                <rect key="frame" x="44" y="65" width="287" height="320"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1eh-G7-f1W" firstAttribute="top" secondItem="GeC-Zi-KNF" secondAttribute="bottom" constant="18" id="1NH-B8-CGy"/>
+                            <constraint firstItem="WFX-Jf-bLG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="135" id="1wt-mq-och"/>
+                            <constraint firstItem="WFX-Jf-bLG" firstAttribute="centerX" secondItem="aBO-vr-zCY" secondAttribute="centerX" id="2Rq-wA-47w"/>
+                            <constraint firstItem="aBO-vr-zCY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="4WD-Pi-bxs"/>
+                            <constraint firstItem="aBO-vr-zCY" firstAttribute="top" secondItem="WFX-Jf-bLG" secondAttribute="bottom" constant="8" symbolic="YES" id="CL7-kP-UQZ"/>
+                            <constraint firstItem="aBO-vr-zCY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="45" id="GTD-xi-7ew"/>
+                            <constraint firstItem="lRV-fP-8gl" firstAttribute="top" secondItem="aBO-vr-zCY" secondAttribute="bottom" constant="21" id="MLa-7d-Nqj"/>
+                            <constraint firstItem="GeC-Zi-KNF" firstAttribute="centerX" secondItem="aBO-vr-zCY" secondAttribute="centerX" id="Y8p-oz-Lpk"/>
+                            <constraint firstItem="GeC-Zi-KNF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="db0-kD-wep"/>
+                            <constraint firstItem="GeC-Zi-KNF" firstAttribute="centerX" secondItem="lRV-fP-8gl" secondAttribute="centerX" id="gpi-JH-LrS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="GeC-Zi-KNF" secondAttribute="bottom" constant="152" id="hKn-7N-3ad"/>
+                            <constraint firstItem="1eh-G7-f1W" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="153" id="hTO-GK-f5w"/>
+                            <constraint firstItem="GeC-Zi-KNF" firstAttribute="top" secondItem="lRV-fP-8gl" secondAttribute="bottom" constant="58" id="jbF-md-utG"/>
+                            <constraint firstItem="1eh-G7-f1W" firstAttribute="centerX" secondItem="GeC-Zi-KNF" secondAttribute="centerX" id="tgS-ib-ctq"/>
+                            <constraint firstItem="GeC-Zi-KNF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tjP-KK-GXO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cameraView" destination="aBO-vr-zCY" id="RqB-Ez-lTF"/>
+                        <outlet property="resultLabel" destination="lRV-fP-8gl" id="09a-1Y-iHm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
